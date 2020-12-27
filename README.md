@@ -1,2 +1,0 @@
-# TeamA
-TeamA
