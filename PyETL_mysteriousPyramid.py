@@ -9,7 +9,7 @@ stock_link = []
 
 for p in list(range(1,7)) + list(range(8,13)) + list(range(14,19)) + list(range(20,32)) : # create page loop
 
-    headers = {'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36'}
+    headers = {'User-Agent': 'put_user_agent_here'}
     url = f'https://norway.twsthr.info/StockHoldersTopWeek.aspx?CID={p}&Show=1'
     res = requests.get(url, headers = headers)
     soup = BeautifulSoup(res.text)
