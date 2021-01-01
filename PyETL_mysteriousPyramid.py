@@ -16,7 +16,7 @@ for p in list(range(1,7)) + list(range(8,13)) + list(range(14,19)) + list(range(
     stock_info = soup.select('td[style="text-decoration: underline"]') # decide selecting label
 
     for i in stock_info : # loop到爬下來的bs4.element.ResultSet物件中
-        if stock_info.index(i) % 2 == 0 : # 因為單數項是股數總類，所以用雙數的就好
+        if stock_info.index(i) % 2 == 0 : # 單數項是股數類別，雙數的是股票名稱
             stock_name_type[i.text] = stock_info[stock_info.index(i)+1].text
             stock_link.append('https://norway.twsthr.info/' + i.a['href'].split('/')[1])
     print(stock_link)
@@ -46,7 +46,7 @@ for i in stock_link_p31 :
     total_entry_v2 = sorted(total_entry_v2)
     sleep_time = random.randint(10, 15)
     time.sleep(sleep_time)
-b = time.time() # count the ending time, can do further a-b to get the duration
+b = time.time() # count the ending time, can do further b-a to get the duration
 
 columns = ['股票名稱', '股票類別',
  '資料日期',
