@@ -40,10 +40,10 @@ for i in stock_link_p31 :
         if j.select('td')[2].text.replace('\xa0', '').isdigit() :
             for k in range(2, 15) :
                 single_entry.append(j.select('td')[k].text.replace('\xa0', ''))
-            total_entry_v2.append(single_entry)
+            total_entry.append(single_entry)
         else :
             continue
-    total_entry_v2 = sorted(total_entry_v2)
+    total_entry = sorted(total_entry)
     sleep_time = random.randint(10, 15)
     time.sleep(sleep_time)
 b = time.time() # count the ending time, can do further b-a to get the duration
