@@ -7,6 +7,7 @@ from datetime import datetime
 import json
 import re
 
+
 # 以下程式碼會先將所有新聞文章網址爬下來
 # url_1 = 'https://udn.com/search/word/2/%E6%96%B0%E5%86%A0%E8%82%BA%E7%82%8E' # 新冠肺炎
 
